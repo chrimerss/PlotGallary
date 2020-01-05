@@ -21,6 +21,8 @@ def scatter(x,y,**figkwargs):
     :axes - axes for the figure
     '''
 
+    _max= max(x.max(), y.max())
+    _min= min(x.min()), y.min()
     fig= plt.figure()
     axes= fig.add_subplot()
     data, x_e, y_e= np.histogram2d(x, y, bins=100)
@@ -28,7 +30,9 @@ def scatter(x,y,**figkwargs):
         data , np.vstack([x,y]).T , method = "splinef2d", bounds_error = False )
     idx= z.argsort() #move high density forward
     x, y, z= x[idx], y[idx], z[idx]
-    axes= axes.scatter(x, y, c= z, s=50, edgecolor= '', cmap='jet', **figkwargs)
+    axes.scatter(x, y, c= z, s=50, edgecolor= '', cmap='jet', **figkwargs)
+    axes.set_aspect('equal', 'box')
+    axes.plot([_min, _max],[_min, _max], c='r')
     cb= plt.colorbar(orientation='vertical', mappable=axes)
 
     return fig, axes
