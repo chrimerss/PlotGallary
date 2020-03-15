@@ -11,15 +11,15 @@ def basic(columns=1):
     plt.rc('xtick', labelsize=16)
     plt.rc('ytick', labelsize=16)
     # plt.rc('text', usetex= True)
-    plt.rc('figure', figsize=(WIDTH, HEIGHT))
-    plt.rc('figure', autolayout=True)
-    plt.rc('axes', titlesize=16)
-    plt.rc('axes', labelsize=17)
+    plt.rc('figure', figsize=(WIDTH, HEIGHT) ,titleweight='bold',titlesize=20)
+    plt.rc('figure', autolayout=True,titlesize=20)
+    plt.rc('axes', labelweight='bold',labelsize=16, titlesize=20)
+
 
     #=======Line2D===========#
     plt.rc('lines', linewidth=2)
     plt.rc('lines', markersize=6)
-    plt.rc('legend', fontsize=13)
+    plt.rc('legend', fontsize=14)
     plt.rc('mathtext', fontset='stix')
     plt.rc('mathtext', it= 'Arial:italic')
     plt.rc('mathtext', rm= 'Arial')
