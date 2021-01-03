@@ -78,13 +78,13 @@ class TaylorDiagram(object):
         ax.axis["top"].major_ticklabels.set_axis_direction("top")
         ax.axis["top"].major_ticklabels.set_fontsize(15)
         ax.axis["top"].label.set_axis_direction("top")
-        ax.axis["top"].label.set_text("gauge density")
-        ax.axis["top"].label.set_fontsize(20)
+        ax.axis["top"].label.set_text("Standardized gauge density")
+        ax.axis["top"].label.set_fontsize(15)
 
 
         ax.axis["left"].set_axis_direction("bottom")  # "X axis"
-        ax.axis["left"].label.set_text("$RMSD_{norm}$")
-        ax.axis["left"].label.set_fontsize(20)
+        ax.axis["left"].label.set_text("RMSD (mm/h)")
+        ax.axis["left"].label.set_fontsize(15)
         ax.axis["left"].major_ticklabels.set_fontsize(15)
 
 
@@ -94,8 +94,8 @@ class TaylorDiagram(object):
             "bottom" if extend else "left")
 
         ax.axis["right"].major_ticklabels.set_fontsize(15)
-        ax.axis["right"].label.set_text("$RMSD_{norm}$")
-        ax.axis["right"].label.set_fontsize(20)
+        ax.axis["right"].label.set_text("RMSD (mm/h)")
+        ax.axis["right"].label.set_fontsize(15)
 
         if self.smin:
             ax.axis["bottom"].toggle(ticklabels=False, label=False)

@@ -1,4 +1,4 @@
-import matplotlib
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 
 def basic(columns=1):
@@ -15,6 +15,17 @@ def basic(columns=1):
     plt.rc('figure', autolayout=True,titlesize=20)
     plt.rc('axes', labelweight='bold',labelsize=16, titlesize=20)
 
+    # =======axis linewidth========
+    mpl.rcParams['xtick.major.size'] = 10
+    mpl.rcParams['xtick.major.width'] = 2
+    mpl.rcParams['xtick.minor.size'] = 5
+    mpl.rcParams['xtick.minor.width'] = 1
+    mpl.rcParams['ytick.major.size'] = 10
+    mpl.rcParams['ytick.major.width'] = 2
+    mpl.rcParams['ytick.minor.size'] = 5
+    mpl.rcParams['ytick.minor.width'] = 1
+    mpl.rcParams['axes.linewidth'] = 2
+    # mpl.rcParams['xtick.minor.visible'] = False
 
     #=======Line2D===========#
     plt.rc('lines', linewidth=2)
