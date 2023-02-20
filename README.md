@@ -1,5 +1,8 @@
 # PlotGallary
 
+
+Please refer to [IPCC Visual Style Guide for Authors](https://www.ipcc.ch/site/assets/uploads/2019/04/IPCC-visual-style-guide.pdf)
+
 This is a collection of fancy plots that is useful in my work!
 
 basic.py: matplotlib configurations for producing publification-level graphs
